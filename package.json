@@ -14,5 +14,6 @@
   },
   "devDependencies": {
     "cypress": "^13.1.0"
-  }
+  },
+  "keywords": []
 }
