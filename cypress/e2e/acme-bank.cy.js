@@ -37,6 +37,7 @@ describe('ACME Bank', () => {
         cy.visit('https://demo.applitools.com')
 
         // Verify the full login page loaded correctly.
+        // Compares the checkpoint image with the baseline image
         cy.eyesCheckWindow({
             tag: "Login page",
             target: 'window',
@@ -49,7 +50,8 @@ describe('ACME Bank', () => {
         cy.get('#log-in').click()
 
         // Verify the full main page loaded correctly.
-        // This snapshot uses LAYOUT match level to avoid differences in closing time text.
+        // This snapshot uses LAYOUT match level to avoid differences in closing time text. 
+        // This match level is most effective when used to validate pages with dynamic content
         cy.eyesCheckWindow({
             tag: "Main page",
             target: 'window',
